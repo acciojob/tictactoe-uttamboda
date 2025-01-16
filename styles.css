@@ -1,81 +1,103 @@
-/*  your css code here. If applicable */
+/* Global styles */
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f4f4f9;
+    /* background-color: #8A2BE2; /* Violet background */ */
 }
 
+/* Container for the game */
 .container {
     text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
 }
 
+/* Heading */
+h1 {
+    font-family: 'Copperplate', 'Papyrus', fantasy;
+    font-size: 36px;
+    /* color: #8A2BE2; */
+    margin-bottom: 20px;
+}
+
+/* Player input section */
 .player-setup {
     display: flex;
-    flex-direction: column; 
-    gap: 15px;              
-    align-items: center;   
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }
 
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 250px;
+}
 
-h1{
-	font-family:  "Papyrus", fantasy;
-	font-weight: bold; 
-	font-size: 48px; 
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: white;
-    color: black;
-    border: 1px , solid ;
-	border-radius: 5px;
+    /* background-color: #8A2BE2; /* Violet button */ */
+    color: white;
+    border: 2px solid #ccc;
+    border-radius: 5px;
     cursor: pointer;
+    width: 250px;
     margin-top: 10px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #7a1dbd;
 }
 
-#game-board {
+/* Gameboard */
+.game-board {
     margin-top: 20px;
 }
 
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    gap: 10px;
+    grid-gap: 5px;
     justify-content: center;
 }
 
 .cell {
     width: 100px;
     height: 100px;
-    border: 1px solid #000;
+    border: 1px solid #ccc;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     font-size: 36px;
     cursor: pointer;
-    background-color: #FFC0CB; ;
-}
-
-.cell:hover {
-    background-color: #e2e2e2;
+    background-color: #FFB6C1;
 }
 
 .message {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
     font-weight: bold;
-}
-
-.winner {
-    color: #28a745;
+    margin-bottom: 20px;
+    color: #333;
 }
